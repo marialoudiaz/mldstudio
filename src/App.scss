@@ -8,6 +8,11 @@ $primary-color: #ffd700;
 }
 
 @font-face {
+  font-family : 'Roboto-LightItalic';
+  src: url('./assets/Roboto-LightItalic.ttf') format('ttf'); 
+}
+
+@font-face {
   font-family : 'Raleway Regular';
   src: url('./assets/Raleway-Regular.ttf') format('ttf'); 
 }
