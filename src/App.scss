@@ -1,4 +1,4 @@
-$primary-color: #ffd700;
+$primary-color: #000000;
 
 @import 'animate.css';
 
@@ -15,4 +15,9 @@ $primary-color: #ffd700;
 @font-face {
   font-family : 'Raleway Regular';
   src: url('./assets/Raleway-Regular.ttf') format('ttf'); 
+}
+
+.scrollable-container {
+  height: 100vh; /* Utilisez une hauteur fixe ou calculez dynamiquement en fonction de votre conception */
+  overflow-y: auto; /* Rend le contenu scrollable en vertical si nécessaire */
 }
