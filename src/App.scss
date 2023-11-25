@@ -17,7 +17,29 @@ $primary-color: #000000;
   src: url('./assets/Raleway-Regular.ttf') format('ttf'); 
 }
 
+@font-face {
+  font-family : 'Karrik-Regular';
+  src: url('./assets/Karrik-Regular.ttf') format('ttf'); 
+}
+
 .scrollable-container {
   height: 100vh; /* Utilisez une hauteur fixe ou calculez dynamiquement en fonction de votre conception */
   overflow-y: auto; /* Rend le contenu scrollable en vertical si nécessaire */
+}
+
+.center{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+h1{
+  font-family: 'Karrik-Regular';
+  font-size: 5rem;
+}
+
+p{
+  font-family: 'Roboto Regular';
+  font-size: 1.3rem;
+  margin: .5rem 16rem .5rem 16rem;
 }

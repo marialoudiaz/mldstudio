@@ -18,7 +18,6 @@ const App = () => (
     <Animation />
     <Parallax />
     <Baseline />
-    <Sidebar />
     <Cible />
     <Categories />
     <Projects />
