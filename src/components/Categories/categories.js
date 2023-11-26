@@ -3,7 +3,7 @@ import './categories.scss';
 
 function index() {
   return (
-    <div>index</div>
+    <div>catégories</div>
   )
 }
 

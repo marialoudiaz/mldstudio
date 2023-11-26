@@ -85,8 +85,11 @@ a {
   
 }
 h2{
-  font-size: 5rem;
+  font-size: 4rem;
   color: #05c46b;
+  border: #05c46b 1px solid;
+  border-radius: 60px;
+  padding: 0.5rem 1rem 0.5rem 1rem;
 }
 
 @keyframes writeAnimation {
@@ -172,5 +175,5 @@ h2{
 
 .toggle{
   display: flex;
-  gap: 1em;
+  gap: .5em;
 }

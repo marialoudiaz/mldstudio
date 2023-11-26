@@ -3,7 +3,7 @@ import './parallax.scss';
 
 function index() {
   return (
-    <div>index</div>
+    <div>parallax</div>
   )
 }
 

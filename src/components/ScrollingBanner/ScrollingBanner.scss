@@ -1,0 +1,23 @@
+.scrolling-banner {
+  overflow: hidden;
+  background-color: #000000;
+  color: white;
+  width: 100vw;
+  padding: 2rem;
+}
+
+.text-container {
+  display: flex;
+  white-space: nowrap;
+  font-family: 'Karrik-Regular';
+  font-size: 15em;
+}
+
+.text {
+  padding: 0 2rem;
+}
+
+.scrolling-banner:hover{
+  animation: none; // Arrêtez l'animation au survol (facultatif)
+  background-color: violet;
+}

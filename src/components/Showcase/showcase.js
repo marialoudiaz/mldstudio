@@ -6,6 +6,7 @@ function Showcase() {
 
   return (
     <div className='showcase'>
+      showcase
       <video width="500" height="200" autoPlay loop muted>
         <source src={videoSource} type="video/mp4" />
       </video>
