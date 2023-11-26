@@ -1,9 +1,28 @@
 import LogoTitle from '../../assets/logo.png'
 import {Link} from 'react-router-dom'
+import React, { useState }from 'react'
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+import { faLinkedinIn, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Importez les icônes individuellement
 import './contact.scss'
 
-
 const Contact =()=>{
+
+  const [copyPopUp, setCopyPopUp] = useState('');
+
+  const handleCopyClick = () =>{
+    const textToCopy= 'loumariadiaz@gmail.com';
+    navigator.clipboard.writeText(textToCopy)
+    .then(()=> {
+      console.log('Texte copié avec succès !');
+      setCopyPopUp('Mail copié avec succès, il ne vous reste plus qu\'à me contacter (et en plus ça rime !)');
+    })
+    .catch((err) => {
+      setCopyPopUp('Erreur lors de la copie du texte : ' + err.message);
+      console.error('Erreur lors de la copie du texte : ', err);
+    });
+  };
+
+
   return(
     <>
     <div className='containercontact-page'>
@@ -13,25 +32,20 @@ const Contact =()=>{
       </div>
 
       <div className='contact-form'>
-        <form>
-          <ul>
-            <li className='half'>
-              <input type='text' name='name' placeholder='Name' required/>
-            </li>
-            <li className='half'>
-              <input type='email' name='email' placeholder='Email' required/>
-            </li>
-            <li>
-              <input type='text' name='subject' placeholder='Subject' required/>
-            </li>
-            <li>
-              <textarea placeholder='Message' name='message' required></textarea>
-            </li>
-            <li>
-              <input type='submit' className='flat-button' value='SEND'/>
-            </li>
-           </ul>
-        </form>
+        <div className='mail'>
+          <button className='buttonmail' onClick={handleCopyClick}><h4>loumariadiaz@gmail.com</h4></button>
+          {copyPopUp && (
+            <div className='popup'>{copyPopUp}</div>
+          )}
+        </div>
+        <div className='social'>
+        <p>retrouvez-moi sur</p>
+        <nav>
+        <button className='buttonIn'><a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/maria-lou-diaz-1b7ba8143/'><FontAwesomeIcon className='svgIcon' icon={faLinkedinIn} style={{color: "#444950"}} /></a></button>
+        <button className='buttonGh'><a target="_blank" rel='noreferrer' href='https://github.com/marialoudiaz'><FontAwesomeIcon className='svgIcon' icon={faGithub} style={{color: "#444950"}} /></a></button>
+        <button className='buttonIs'><a target="_blank" rel='noreferrer' href='https://www.instagram.com/studio_mld/'><FontAwesomeIcon className='svgIcon' icon={faInstagram} style={{color: "#444950"}} /></a></button>
+        </nav>
+        </div>
       </div>
     </div>
 

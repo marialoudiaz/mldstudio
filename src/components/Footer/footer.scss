@@ -1,28 +1,17 @@
 .nav-bar{
-  background: #f3f6f4;
   width:100vw;
-  height:20vh;
+  height:10vh;
+  margin-bottom: 2%;
   display: flex;
-  flex-wrap: wrap;
-  gap:10em;
+  gap:2em;
+}
 
-  nav{
+  footer{
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap:1.5em;
-    font-family: 'Roboto-Regular';
+    flex-wrap: nowrap;
+    gap:.5em;
     margin: 0 0 1.5em;
-    a {
-      color: #000;
-      text-decoration: none;
-      font-size: 2rem;
-
-      &:hover {
-        font-family:'Roboto-LightItalic';
-        text-decoration: none;
-      }
-    }
+    font-family: 'Karrik-Regular';
   }
   img{
     display: block;
@@ -30,13 +19,10 @@
     width:5vw;
     height: auto;
   }
-}
-
-
 
 p{
-  font-family: 'Roboto-Regular';
-  font-weight: 500;
+  font-family: 'Karrik-Regular';
+  font-size: smaller;
 }
 
 button {
