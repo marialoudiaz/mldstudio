@@ -1,13 +1,31 @@
 import LogoTitle from '../../assets/logo.png'
 import {Link} from 'react-router-dom'
-import React, { useState }from 'react'
+import React, { useState, useEffect }from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Importez les icônes individuellement
 import './contact.scss'
+import Typewriter from 'typewriter-effect';
 
 const Contact =()=>{
-
+  const [showHistoire, setShowHistoire] = useState(false);
+  const typewriterStrings = ['Plus qu\'un projet,', 'racontons votre'];
+  const [currentStringIndex, setCurrentStringIndex] = useState(0);
   const [copyPopUp, setCopyPopUp] = useState('');
+  const [toggleClickCompo, setToggleClick] = useState('');
+  
+  useEffect(() => {
+    const timeoutId = setTimeout(() => {
+      setCurrentStringIndex((prevIndex) => (prevIndex + 1) % typewriterStrings.length);
+      // si atteint fin array => afficher histoire
+      if (currentStringIndex === typewriterStrings.length - 1) {
+        setShowHistoire(true);
+      }
+    }, 6000); // 6 secondes
+    setTimeout(() => {
+      setShowHistoire(false);
+    }, 10000); // Afficher "histoire" pendant 10 secondes
+    return () => clearTimeout(timeoutId);
+  }, [currentStringIndex]);
 
   const handleCopyClick = () =>{
     const textToCopy= 'loumariadiaz@gmail.com';
@@ -15,28 +33,60 @@ const Contact =()=>{
     .then(()=> {
       console.log('Texte copié avec succès !');
       setCopyPopUp('Mail copié avec succès, il ne vous reste plus qu\'à me contacter (et en plus ça rime !)');
+      setTimeout(()=>{
+        setCopyPopUp('');
+      }, 10000);
     })
     .catch((err) => {
       setCopyPopUp('Erreur lors de la copie du texte : ' + err.message);
       console.error('Erreur lors de la copie du texte : ', err);
+      setTimeout(()=>{
+        setCopyPopUp('');
+      }, 10000);
     });
   };
 
+  const toggleClick = () =>{
+     setToggleClick('repensons votre unicité');
+      setTimeout(()=>{
+        setCopyPopUp('');
+      }, 10000)
+  };
 
   return(
     <>
     <div className='containercontact-page'>
       <div className='text-zone'>
-        <h1>Plus qu'un projet, <br /> racontez votre <br /> histoire.</h1> // effet typing (gif ou algo)
-        <h2>bouton:repensons votre unicité</h2>
+      {!showHistoire && (
+        <Typewriter className='typewriter'
+          options={{
+            strings: [typewriterStrings[currentStringIndex]],
+            autoStart: true,
+            loop: true,
+          }}
+        />
+      )}
+           {showHistoire && (
+        <div className='histoire'>
+          <div className='histoire-animation'>histoire</div>
+        </div>
+      )}
+      <div className='toggle'>
+        <label className="toggle-switch">
+          <button onClick={toggleClick} type="checkbox"/>
+            <div className="toggle-switch-background">
+            <div className="toggle-switch-handle"></div>
+          </div>
+        </label>
+          <h2>{toggleClickCompo}</h2>
+       </div>
       </div>
 
       <div className='contact-form'>
         <div className='mail'>
-          <button className='buttonmail' onClick={handleCopyClick}><h4>loumariadiaz@gmail.com</h4></button>
-          {copyPopUp && (
-            <div className='popup'>{copyPopUp}</div>
-          )}
+          <button className='buttonmail' onClick={handleCopyClick}>
+            <h4>{copyPopUp ? copyPopUp : 'loumariadiaz@gmail.com'}</h4>
+          </button>
         </div>
         <div className='social'>
         <p>retrouvez-moi sur</p>
@@ -48,40 +98,7 @@ const Contact =()=>{
         </div>
       </div>
     </div>
-
     </>
-  )
-
-
+   )
   }
-export default Contact
-
-// import React, { useRef } from 'react';
-// import emailjs from '@emailjs/browser';
-
-// export const ContactUs = () => {
-//   const form = useRef();
-
-//   const sendEmail = (e) => {
-//     e.preventDefault();
-
-//     emailjs.sendForm('YOUR_SERVICE_ID', 'YOUR_TEMPLATE_ID', form.current, 'YOUR_PUBLIC_KEY')
-//       .then((result) => {
-//           console.log(result.text);
-//       }, (error) => {
-//           console.log(error.text);
-//       });
-//   };
-
-//   return (
-//     <form ref={form} onSubmit={sendEmail}>
-//       <label>Name</label>
-//       <input type="text" name="user_name" />
-//       <label>Email</label>
-//       <input type="email" name="user_email" />
-//       <label>Message</label>
-//       <textarea name="message" />
-//       <input type="submit" value="Send" />
-//     </form>
-//   );
-// };
+export default Contact;

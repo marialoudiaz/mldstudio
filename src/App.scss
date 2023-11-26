@@ -4,22 +4,44 @@ $primary-color: #000000;
 
 @font-face {
   font-family : 'Roboto Regular';
-  src: url('./assets/Roboto-Regular.ttf') format('ttf'); 
+  src: url('./assets/Roboto-Regular.ttf') format('truetype'); 
 }
-
 @font-face {
   font-family : 'Roboto-LightItalic';
-  src: url('./assets/Roboto-LightItalic.ttf') format('ttf'); 
+  src: url('./assets/Roboto-LightItalic.ttf') format('truetype'); 
 }
 
 @font-face {
   font-family : 'Raleway Regular';
-  src: url('./assets/Raleway-Regular.ttf') format('ttf'); 
+  src: url('./assets/Raleway-Regular.ttf') format('truetype'); 
 }
 
 @font-face {
   font-family : 'Karrik-Regular';
-  src: url('./assets/Karrik-Regular.ttf') format('ttf'); 
+  src: url('./assets/Karrik-Regular.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family : 'Basteleur-Bold';
+  src: url('./assets/Basteleur-Bold.ttf') format('truetype'); 
+}
+
+@font-face {
+  font-family : 'Compagnon-Bold';
+  src: url('./assets/Compagnon-Bold.woff2') format('woff2'); 
+}
+
+@font-face {
+  font-family : 'Epilogue-Bold';
+  src: url('./assets/Epilogue-Bold.ttf') format('truetype'); 
+}
+@font-face {
+  font-family : 'PlayfairDisplay-Medium';
+  src: url('./assets/PlayfairDisplay-Medium.ttf') format('truetype'); 
+}
+@font-face {
+  font-family : 'Sora-ExtraBold';
+  src: url('./assets/Sora-ExtraBold.ttf') format('truetype'); 
 }
 
 .scrollable-container {

@@ -1,4 +1,3 @@
-
 .social{
   display: flex;
   flex-wrap: nowrap;
@@ -77,4 +76,101 @@ a {
     font-family:'Roboto-LightItalic';
     text-decoration: none;
   }
+}
+
+.text-zone{
+  font-family: 'Karrik-Regular';
+  font-size: 6.5em;
+  margin-left: .5rem;
+  
+}
+h2{
+  font-size: 5rem;
+  color: #05c46b;
+}
+
+@keyframes writeAnimation {
+  0% {
+    font-family: 'Karrik-Regular';
+  }
+  10% {
+    font-family: 'Basteleur-Bold';
+  }
+  30% {
+    font-family: 'Sora-ExtraBold';
+  }
+  50% {
+    font-family: 'Epilogue-Bold';
+  }
+  100% {
+    font-family: 'PlayfairDisplay-Medium';
+  }
+}
+.histoire-animation {
+  margin-left: .5rem;
+  font-family: 'Karrik-Regular'; // Définir la première fonte
+  animation: writeAnimation 1s; // 2 secondes d'animation
+  animation-timing-function: steps(5, end); // Utiliser 5 étapes pour imiter l'effet d'écriture
+}
+
+.toggle-switch {
+  position: relative;
+  display: inline-block;
+  width: 20rem;
+  height: 6rem;
+  margin-top: .5em;
+  cursor: pointer;
+}
+
+.toggle-switch button[type="checkbox"] {
+  display: none;
+}
+
+.toggle-switch-background {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #ddd;
+  border-radius: 60px;
+  box-shadow: inset 0 0 0 2px #ccc;
+  transition: background-color 0.3s ease-in-out;
+}
+
+.toggle-switch-handle {
+  position: absolute;
+  top: .5rem;
+  left: 1rem;
+  width: 5rem;
+  height: 5rem;
+  background-color: #fff;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease-in-out;
+}
+
+.toggle-switch button[type="checkbox"]:active + .toggle-switch-handle {
+  transform: translateX(200px);
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2), 0 0 0 3px #F8FF95;
+  ;
+}
+
+.toggle-switch button[type="checkbox"]:active + .toggle-switch-background {
+  background-color: #05c46b;
+  box-shadow: inset 0 0 0 2px #04b360;
+}
+
+.toggle-switch button [type="checkbox"]:active + .toggle-switch:before {
+  color: #05c46b;
+  right: -30px;
+}
+
+.toggle-switch button[type="checkbox"]:active + .toggle-switch-background .toggle-switch-handle {
+  transform: translateX(210px);
+}
+
+.toggle{
+  display: flex;
+  gap: 1em;
 }

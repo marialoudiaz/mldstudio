@@ -29,14 +29,3 @@ function Cible(){
   }
 
 export default Cible;
-  // Changer le texte automatiquement lors du montage du composant
-  // useEffect(() => {
-  //   const intervalId = setInterval(() => {
-  //     // Fonction appelée toutes les 5 secondes pour changer le texte du bouton
-  //     setButtonText((prevText) => { // prevText est le props de texte recu
-  //       // Vous pouvez implémenter la logique de changement de texte ici
-  //       return prevText === 'autoentrepreneur' ? 'idéaliste' : 'créatif';
-  //     });
-  //   }, 5000); // Intervalle de 5 secondes
-  //   return () => clearInterval(intervalId);
-  // }, []); // Effectue l'effet seulement lors du montage du composant
