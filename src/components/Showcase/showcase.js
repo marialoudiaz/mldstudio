@@ -1,5 +1,5 @@
 import React from 'react'
-import './index.scss'
+import './showcase.scss'
 
 function Showcase() {
   const videoSource = process.env.PUBLIC_URL + '/showreel.mp4';

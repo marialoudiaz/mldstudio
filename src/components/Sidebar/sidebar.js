@@ -1,8 +1,9 @@
 import {Link, NavLink} from 'react-router-dom'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faLinkedinIn, faGithub, faInstagram } from '@fortawesome/free-brands-svg-icons'; // Importez les icônes individuellement
-import '../Sidebar/index.scss';
+import './sidebar.scss';
 import Logo from '../../assets/logo.png'
+
 const Sidebar = () => (
   <div className='nav-bar'>
     <Link className='logo' to='/'><img src={Logo} alt='logo'/></Link>

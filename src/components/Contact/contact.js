@@ -1,6 +1,6 @@
 import LogoTitle from '../../assets/logo.png'
 import {Link} from 'react-router-dom'
-import './index.scss'
+import './contact.scss'
 
 
 const Contact =()=>{

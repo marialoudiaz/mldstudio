@@ -1,16 +1,15 @@
 import React from 'react';
-import logo from './logo.svg';
 import './App.scss';
-import Animation from './components/Animation';
-import Parallax from './components/Parallax';
-import Baseline from './components/Baseline';
-import Cible from './components/Cible';
-import Sidebar from './components/Sidebar';
-import Categories from './components/Categories';
-import Projects from './components/Projets';
-import Showcase from './components/Showcase';
-import Contact from './components/Contact';
-import Footer from './components/Footer';
+import Animation from './components/Animation/animation';
+import Parallax from './components/Parallax/parallax';
+import Baseline from './components/Baseline/baseline';
+import Cible from './components/Cible/cible';
+// import Sidebar from './components/Sidebar';
+import Categories from './components/Categories/categories';
+import Projects from './components/Projets/projets';
+import Showcase from './components/Showcase/showcase';
+import Contact from './components/Contact/contact';
+import Footer from './components/Footer/footer';
 
 const App = () => (
   <>

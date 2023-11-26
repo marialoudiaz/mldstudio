@@ -1,4 +1,5 @@
-import React from 'react'
+import React from 'react';
+import './categories.scss';
 
 function index() {
   return (
