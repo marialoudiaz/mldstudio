@@ -78,26 +78,23 @@ const Contact =()=>{
             <div className="toggle-switch-handle"></div>
           </div>
         </label>
-          <h2>{toggleClickCompo}</h2>
+          <h2 className={`toggle ${toggleClickCompo ? 'toggleActive' : 'toggleInactive'}`}>{toggleClickCompo}</h2>
        </div>
       </div>
-
-      <div className='contact-form'>
-        <div className='mail'>
-          <button className='buttonmail' onClick={handleCopyClick}>
-            <h4>{copyPopUp ? copyPopUp : 'loumariadiaz@gmail.com'}</h4>
-          </button>
-        </div>
-        <div className='social'>
-        <p>retrouvez-moi sur</p>
+      <div className='social'> 
         <nav>
+        <p>retrouvez-moi sur</p>
         <button className='buttonIn'><a target="_blank" rel='noreferrer' href='https://www.linkedin.com/in/maria-lou-diaz-1b7ba8143/'><FontAwesomeIcon className='svgIcon' icon={faLinkedinIn} style={{color: "#444950"}} /></a></button>
         <button className='buttonGh'><a target="_blank" rel='noreferrer' href='https://github.com/marialoudiaz'><FontAwesomeIcon className='svgIcon' icon={faGithub} style={{color: "#444950"}} /></a></button>
         <button className='buttonIs'><a target="_blank" rel='noreferrer' href='https://www.instagram.com/studio_mld/'><FontAwesomeIcon className='svgIcon' icon={faInstagram} style={{color: "#444950"}} /></a></button>
         </nav>
         </div>
+        <div className='mail'>
+          <button className='buttonmail' onClick={handleCopyClick}>
+            <h4>{copyPopUp ? copyPopUp : 'loumariadiaz@gmail.com'}</h4>
+          </button>
+        </div>
       </div>
-    </div>
     </>
    )
   }

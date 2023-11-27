@@ -1,14 +1,26 @@
-.social{
+nav{
   display: flex;
   flex-wrap: nowrap;
-  flex-direction: column;
-  justify-content: end;
-  align-items: end;
-  gap: .5em;
+  justify-content:end;
+  align-items: center;
+  margin-right:3em;
+  gap:1em;
+}
+.social{
+  & nav p{
+      margin:1.5em;
+    }
   & p{
-    font-size: 2rem;
+    font-size: 2.5rem;
     margin-right: 1.5em;
-    margin-bottom: .5em;
+    margin-bottom: 1.5em;
+  }
+  & button{
+    width: 5em;
+    height: 5em;
+    & a .svgIcon{
+      width: 15em;
+    }
   }
 }
 
@@ -57,16 +69,6 @@
     font-size: 1.6rem;
   }
 }
-
-nav{
-  display: flex;
-  flex-wrap: nowrap;
-  justify-content:end;
-  align-items: center;
-  margin-right:3em;
-  gap:1em;
-}
-
 a {
   color: #000;
   text-decoration: none;
@@ -84,12 +86,16 @@ a {
   margin-left: .5rem;
   
 }
-h2{
+.toggleActive{
   font-size: 4rem;
   color: #05c46b;
   border: #05c46b 1px solid;
   border-radius: 60px;
-  padding: 0.5rem 1rem 0.5rem 1rem;
+  padding: .7rem 2rem .7rem 2rem;
+  margin-top: 1.2em;
+}
+.toggleInactive{
+  display: none
 }
 
 @keyframes writeAnimation {
@@ -119,9 +125,10 @@ h2{
 .toggle-switch {
   position: relative;
   display: inline-block;
-  width: 20rem;
+  width: 12rem;
   height: 6rem;
-  margin-top: .5em;
+  margin-top: .2em;
+  margin-bottom: 0;
   cursor: pointer;
 }
 
@@ -175,5 +182,7 @@ h2{
 
 .toggle{
   display: flex;
-  gap: .5em;
+  gap: .2em;
+  align-items: center;
+  
 }

@@ -23,7 +23,7 @@ function Cible(){
         <h1 className='circled'>Un projet ?</h1>
         <ScrollingBanner words={words} />
         <p>Nam dolorum nobis eos distinctio autem sit dignissimos natus est rerum odio. Et quam aperiam cum maiores galisum a quia labore qui neque sint vel maxime nulla aut accusamus similique et placeat vero. Sed nihil neque id voluptate alias eum debitis asperiores.</p>
-        <h3>on vous accompagne</h3>
+        <h3 style={{margin:'0'}}>je vous accompagne</h3>
       </div>
       <div className='rolling-btn' onMouseEnter={handleMouseEnter}>{buttonText}</div>
     </>

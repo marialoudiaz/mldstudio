@@ -1,9 +1,15 @@
 import React from 'react';
 import './projets.scss';
+import img1 from '../../assets/';
+import img2 from '../../assets/';
+import img3 from '../../assets/';
+import img4 from '../../assets/';
+import img5 from '../../assets/';
+import img6 from '../../assets/';
 
 function index() {
-
-  const projectsArr=['Matchjobs','Onsight','Pile-Poële']
+  const photosArr= [img1,img2,img3,img4,img5,img6];
+  const projectsArr=['Matchjobs','Onsight','Pile-Poële', 'Monogrammes','Topographies','Posters']
   return (
     <div>
        <div className='grid-lines'>
