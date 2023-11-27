@@ -12,3 +12,10 @@
     
   }
 }
+
+.grid-lines div{
+  border: 1px solid black;
+  & p{
+    font-size: 3rem;
+  }
+}
