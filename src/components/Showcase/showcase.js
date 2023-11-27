@@ -1,14 +1,13 @@
 import React from 'react'
 import './showcase.scss'
+import Video from '../../assets/showreel.mp4';
 
 function Showcase() {
-  const videoSource = process.env.PUBLIC_URL + '/showreel.mp4';
 
   return (
     <div className='showcase'>
-      showcase
-      <video width="500" height="200" autoPlay loop muted>
-        <source src={videoSource} type="video/mp4" />
+      <video width='500' height='200' autoPlay loop muted>
+        <source src={Video} type='video/mp4' />
       </video>
     </div>
   );
