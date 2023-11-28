@@ -1,11 +1,11 @@
 import React from 'react';
 import './projets.scss';
-import img1 from '../../assets/';
-import img2 from '../../assets/';
-import img3 from '../../assets/';
-import img4 from '../../assets/';
-import img5 from '../../assets/';
-import img6 from '../../assets/';
+import img1 from '../../assets/logomj.png';
+import img2 from '../../assets/onsight.png';
+import img3 from '../../assets/pilepoele.png';
+import img4 from '../../assets/cdvmono.jpg';
+import img5 from '../../assets/topos.jpg';
+import img6 from '../../assets/persona_poster.jpg';
 
 function index() {
   const photosArr= [img1,img2,img3,img4,img5,img6];
@@ -15,7 +15,7 @@ function index() {
        <div className='grid-lines'>
         {projectsArr.map((project, index) => (
           <div key={index}>
-            <img />
+            <img className={`imageHover ${index === photosArr ? 'imageHover' : ''}`} src={photosArr[index]}/>
             <p>{project}</p>
           </div>
         ))}
