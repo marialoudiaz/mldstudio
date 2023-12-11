@@ -5,7 +5,7 @@ import Parallax from './components/Parallax/parallax';
 import Baseline from './components/Baseline/baseline';
 import Cible from './components/Cible/cible';
 // import Sidebar from './components/Sidebar';
-import Categories from './components/Categories/categories';
+import Categories from './components/Categories/categories.js';
 import Projects from './components/Projets/projets';
 import Showcase from './components/Showcase/showcase';
 import Contact from './components/Contact/contact';

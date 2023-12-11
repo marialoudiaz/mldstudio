@@ -13,7 +13,6 @@ function Cible(){
   const handleMouseEnter =()=>{
     const currentIndex = textsArray.indexOf(buttonText);
     const nextIndex = (currentIndex + 1)%textsArray.length;
-
     setButtonText(textsArray[nextIndex]);
   };
 

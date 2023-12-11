@@ -13,6 +13,7 @@ const Contact =()=>{
   const [copyPopUp, setCopyPopUp] = useState('');
   const [toggleClickCompo, setToggleClick] = useState('');
   
+  // Montrer les différentes typos de 'histoire' lorsque le texe a fini de s'écrire
   useEffect(() => {
     const timeoutId = setTimeout(() => {
       setCurrentStringIndex((prevIndex) => (prevIndex + 1) % typewriterStrings.length);
@@ -27,6 +28,7 @@ const Contact =()=>{
     return () => clearTimeout(timeoutId);
   }, [currentStringIndex]);
 
+  // Copier le mail
   const handleCopyClick = () =>{
     const textToCopy= 'loumariadiaz@gmail.com';
     navigator.clipboard.writeText(textToCopy)
