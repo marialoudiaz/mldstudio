@@ -7,7 +7,7 @@ import image4 from '../../assets/ui.jpg';
 import image5 from'../../assets/topos.jpg';
 import image6 from '../../assets/pilepoelerose.jpg';
 
-function categories() {
+function Categories() {
 
   const catArr = [
     {
@@ -61,4 +61,4 @@ function categories() {
 
 }
 
-export default categories
+export default Categories

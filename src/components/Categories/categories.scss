@@ -1,39 +1,10 @@
-  /////////CIBLE//////////
-  .rolling-btn{
-  background-color: #FFA1F5;
-  width:fit-content;
-  height: auto;
-  padding: .5rem;
-  border: 2px black;
-  border-radius: 10px;
-  font-size: 1.5rem;
-  font-family: 'Roboto-Regular';
-  transform: rotate(-10deg);
-  z-index: 10000;
-  position: sticky;
-  left: 60%;
-  bottom: -50%;
-}
-.rolling-categories{
-  background-color: black;
-  width: 100vw;
-  height: auto;
-  color: white;
-  padding: 4rem;
-  margin-bottom:2em;
-}
-
-.center p{
-  font-size: 2rem;
-}
-  
   /////////////////// GRID ///////////////////////
   .grid-container {
     display: flex; // flexbox permet d'avoir chaque div sur une meme ligne et de modifier leur taille au survol
     gap: 1rem;
     padding: 20px;
     overflow-x: auto;
-    flex-wrap: nowrap; // chaque div sur la même ligne
+    // flex-wrap: nowrap; // chaque div sur la même ligne
   }
   .grid-item {
   flex: 1; // 
@@ -45,11 +16,8 @@
 }
 
 .grid-item:hover {
-      flex:2;
-      // gap:2rem;
-      transform: scale(1.5);
-      z-index: 3;
-      
+  flex-grow: 4; // élargit homothetiquement la div survolée
+  transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;  
 }
 .grid-item img {
   max-width: 100%;
@@ -63,11 +31,12 @@
   text-align: center;
   margin-top: 20rem
 }  
+
+
 .grid-text {
-    background: rgba(0, 0, 0, 0.258);
     color: #fff;
     opacity:0;
-    height: 50%;
+    height: 100vh;
     margin-top: 2rem;
     display: flex;
     align-items: center;
@@ -75,15 +44,8 @@
     font-family: 'Inter';
     font-size: 1rem;
     text-align: center;
-    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out;  
 }
   
-  .grid-text:hover {
-    background-color: #000000;
-    opacity: .5;
-    transform: scale(2);
-  }
-
 
 //// RESPONSIVE ///////
   @media (max-width: 600px) {
