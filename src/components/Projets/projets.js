@@ -1,18 +1,63 @@
 import React from 'react';
 import {useRef, useState, useEffect} from 'react';
 import './projets.scss';
-import img1 from '../../assets/logomj.png';
-import img2 from '../../assets/onsight.png';
-import img3 from '../../assets/pilepoele.png';
-import img4 from '../../assets/cdvmono.jpg';
-import img5 from '../../assets/topos.jpg';
-import img6 from '../../assets/persona_poster.jpg';
+import image1 from '../../assets/logomj.png';
+import image2 from '../../assets/onsight.png';
+import image3 from '../../assets/pilepoele.png';
+import image4 from '../../assets/cdvmono.jpg';
+import image5 from '../../assets/topos.jpg';
+import image6 from '../../assets/persona_poster.jpg';
 
 function Projets() {
-  const photosArr= [img1,img2,img3,img4,img5,img6];
-  const projectsArr=['Matchjobs','Onsight','Pile-Poële', 'Monogrammes','Topographies','Posters']
-  const titleArr=['A new era of recruitement','A retro app to keep your movies, on sight','Une fonte culinario-inclusive','Une sélection d\'identités','Dessiner la ville par ses ornements, une sélection de fusains','Une sélection de mes amours cinés en poster'];
-  const txtArr=['blabla','blibli','bloblo','blublu','bleble','blybly'];
+    
+  const projectsArr = [
+    {
+      id: 1,
+      image: image1,
+      title: 'Matchjobs',
+      baseline: 'A new era of recruitement',
+      text:'blabla',
+      link: 'matchjobs.com',
+
+    },
+    {
+      id: 2,
+      image: image2,
+      title: 'Onsight',
+      baseline: 'A retro app to keep your movies, on sight',
+      text:'blabla',
+      link: 'onsight.com',
+    },
+    {
+      id: 3,
+      image: image3,
+      title: 'Pile-Poële',
+      baseline: 'Une fonte culinario-inclusive',
+      text:'blabla',
+      link: 'pilepoele.com',
+    },
+    {
+      id: 4,
+      image: image4,
+      title: 'Monogrammes',
+      baseline: 'Une sélection d\'identités',
+      text:'blabla',
+    },
+    {
+      id: 5,
+      image: image5,
+      title: 'Topographies',
+      baseline: 'Dessiner la ville par ses ornements, une sélection de fusains',
+      text:'blabla',
+    },
+    {
+      id: 6,
+      image: image6,
+      title: 'Posters',
+      baseline: 'Une sélection de mes amours cinématographiques',
+      text:'blabla',
+    }
+  ];
 
   const [scrollPosition, setScrollPosition]= useState(0);
   const gridContainerRef = useRef(null);
@@ -25,29 +70,45 @@ function Projets() {
 
   // const handleScroll = (direction)=>{
   //   const scrollAmount =200;
-
   //     if (direction ==='left'){
   //       setScrollPosition((prevPosition)=> prevPosition - scrollAmount)
   //     } else{
   //       setScrollPosition((prevPosition)=> prevPosition + scrollAmount)
-
   //     }
   // };
+
+  // grid-container
+
+  // map function de l'array de projets
+  // project-wrapper
+  // project-img
+  // project-description
+   // project-title
+   // project-txt
+   // project-link (if link => display)
 
   return (
     <div>
        <div className='grid-container' ref={gridContainerRef}>
         {projectsArr.map((project, index) => (
-          <div className='project-wrapper' key={index}>
+
+        <div className='project-wrapper' key={index}>
+            
             <div className='projectImg'>
-              <img className={`imageHover ${index === photosArr ? 'imageHover' : ''}`} src={photosArr[index]}/>
+              <img src={projectsArr[index].image}/>
             </div>
-            <div className='projectTxt'>
-              <h2>{titleArr[index]}</h2>
-              <p>{txtArr[index]}</p>
+
+            <div className='project-description'>
+              <div className='project-title'><h2>{projectsArr[index].title}</h2></div>
+              <div className='project-txt'><p>{projectsArr[index].text}</p></div>
+               <div className='project link'></div> {/*hide if no link key/value pair at given index  */}
             </div>
-          <div className='nameProject'>{project}</div> 
-          </div>
+
+            <div className='carousel-btn'>
+              <div className='carousel-btn-left'><svg></svg></div>
+              <div className='carousel-btn-right'><svg></svg></div>
+            </div>
+        </div>
   ))}
   </div>
 <div className='scroll-buttons'> 

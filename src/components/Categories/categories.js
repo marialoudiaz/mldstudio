@@ -41,7 +41,6 @@ function Categories() {
       title: 'Typographie',
     }
   ];
-  const words = ['Identité visuelle', 'Site vitrine', 'Application web', 'Application mobile','Typographie', 'Illustration']; // Ajoutez autant de mots que nécessaire
 
   // Une grille d'une colonne avec une div possédant une image
   // Au survol le titre de la catégorie s'affiche
