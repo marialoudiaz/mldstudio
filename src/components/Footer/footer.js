@@ -1,6 +1,6 @@
 import {Link} from 'react-router-dom'
 import './footer.scss';
-import Logo from '../../assets/logo.png'
+import Logo from '../../assets/projets/logo.png'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 const Footer = () => (
   <div className='nav-bar'>

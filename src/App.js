@@ -1,28 +1,26 @@
 import React from 'react';
 import './App.scss';
 import Animation from './components/Animation/animation';
-import Parallax from './components/Parallax/parallax';
-import Baseline from './components/Baseline/baseline';
+import Parallax from './components/Parallax/ParallaxComp';
 import Cible from './components/Cible/cible';
-// import Sidebar from './components/Sidebar';
 import Categories from './components/Categories/categories.js';
 import Projects from './components/Projets/projets';
 import Showcase from './components/Showcase/showcase';
 import Contact from './components/Contact/contact';
 import Footer from './components/Footer/footer';
 
+
 const App = () => (
   <>
    <div className="scrollable-container">
-    <Animation />
-    <Parallax />
-    <Baseline />
-    <Cible />
-    <Categories />
-    <Projects />
-    <Showcase />
-    <Contact />
-    <Footer />
+      <Animation />
+      <Parallax />
+      <Cible />
+      <Categories />
+      <Projects />
+      <Showcase />
+      <Contact />
+      <Footer />
     </div>
     </>
 );

@@ -22,6 +22,7 @@ const ScrollingBanner = ({ words }) => {
 }, []);
 
   return (
+  
     <div className="scrolling-banner">
       <div className="text-container" style={{ transform: `translateX(${scrollPosition}px)` }}>
         {words.map((word, index) => (

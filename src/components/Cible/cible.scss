@@ -8,8 +8,8 @@
     border-radius: 10px;
     font-size: 1.5rem;
     font-family: 'Roboto-Regular';
-    transform: rotate(-10deg);
-    z-index: 10000;
+    transform: rotate(-4deg);
+    z-index: 100;
     position: sticky;
     left: 60%;
     bottom: -50%;
@@ -25,5 +25,12 @@
   
   .center p{
     font-size: 2rem;
+
   }
     
+  .baseline{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+  }

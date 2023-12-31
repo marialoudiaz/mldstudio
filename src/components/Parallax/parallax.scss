@@ -1,0 +1,46 @@
+.parallax{
+  pointer-events: none;
+}
+
+
+.containerparallax{
+perspective: 100vw; /*créer l'effet de profondeur*/
+perspective-origin: 50% 50%;
+width: 100vw;
+height:100vh;
+overflow: hidden;
+
+}
+
+.containerparallax *{
+  width:50vw;
+  height: 100vh;
+  padding: 0;
+  margin:0;
+}
+
+.parallaxtext{
+  padding: 0;
+  margin:0;
+  position: absolute;
+}
+
+.grid-massive-title{
+  display: flex;
+  flex-direction: column;
+  grid-column: 1/-1;
+}
+
+.grid-massive-title-bloc{
+  display: flex;
+  position: relative;
+  flex-wrap: wrap;
+}
+
+.grid-massive-title-bloc h2{
+  margin-left: 0em;
+  margin-right: 0.05em;
+  --kern: 0 0.05em 0 0em;
+  font-size: 30rem;
+  font-family: 'Karrik-Regular';
+}

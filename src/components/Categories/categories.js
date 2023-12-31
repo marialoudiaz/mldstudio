@@ -1,43 +1,43 @@
 import React, { useState} from 'react'
 import '../Categories/categories.scss';
-import image1 from'../../assets/ivAegilops.jpg';
-import image2 from '../../assets/onsight.png';
-import image3 from '../../assets/ui.jpg';
-import image4 from '../../assets/ui.jpg';
-import image5 from'../../assets/topos.jpg';
-import image6 from '../../assets/pilepoelerose.jpg';
+import uno from'../../assets/projets/ivAegilops.jpg';
+import dos from '../../assets/projets/onsight.png';
+import tres from '../../assets/projets/ui.jpg';
+import cuatro from '../../assets/projets/ui.jpg';
+import cinco from'../../assets/projets/topos.jpg';
+import seis from '../../assets/projets/pilepoelerose.jpg';
 
 function Categories() {
 
   const catArr = [
     {
-      id: 1,
-      image: image1,
+      id: 7,
+      image: uno,
       title: 'Identité visuelle',
     },
     {
-      id: 2,
-      image: image2,
+      id: 8,
+      image: dos,
       title: 'Développement web & mobile',
     },
     {
-      id: 3,
-      image: image3,
+      id: 9,
+      image: tres,
       title: 'Expérience utilisateur (UX)',
     },
     {
-      id:4,
-      image: image4,
+      id:10,
+      image: cuatro,
       title: 'Design d\'interface (UI)',
     },
     {
-      id:5,
-      image: image5,
+      id:11,
+      image: cinco,
       title: 'Illustration',
     },
     {
-      id:6,
-      image: image6,
+      id:12,
+      image: seis,
       title: 'Typographie',
     }
   ];

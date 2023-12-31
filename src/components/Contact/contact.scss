@@ -101,22 +101,28 @@ a {
 @keyframes writeAnimation {
   0% {
     font-family: 'Karrik-Regular';
+    font-size: 100px;
   }
   10% {
     font-family: 'Basteleur-Bold';
+    font-size: 100px;
   }
   30% {
     font-family: 'Sora-ExtraBold';
+    font-size: 100px;
   }
   50% {
     font-family: 'Epilogue-Bold';
+    font-size: 100px;
   }
   100% {
     font-family: 'PlayfairDisplay-Medium';
+    font-size: 100px;
   }
 }
 .histoire-animation {
   margin-left: .5rem;
+  font-size: 100px;
   font-family: 'Karrik-Regular'; // Définir la première fonte
   animation: writeAnimation 1s; // 2 secondes d'animation
   animation-timing-function: steps(5, end); // Utiliser 5 étapes pour imiter l'effet d'écriture

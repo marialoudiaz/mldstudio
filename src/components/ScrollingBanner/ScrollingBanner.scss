@@ -3,14 +3,15 @@
   background-color: #000000;
   color: white;
   width: 100vw;
-  padding: 2rem;
+  padding: .8rem;
+  transform: rotate(-.99turn);
 }
 
 .text-container {
   display: flex;
   white-space: nowrap;
   font-family: 'Karrik-Regular';
-  font-size: 15em;
+  font-size: 6em;
 }
 
 .text {

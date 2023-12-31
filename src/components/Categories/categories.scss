@@ -3,7 +3,8 @@
     display: flex; // flexbox permet d'avoir chaque div sur une meme ligne et de modifier leur taille au survol
     gap: 1rem;
     padding: 20px;
-    overflow-x: auto;
+    overflow-x: hidden;
+    
     // flex-wrap: nowrap; // chaque div sur la même ligne
   }
   .grid-item {

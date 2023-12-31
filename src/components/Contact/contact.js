@@ -1,4 +1,4 @@
-import LogoTitle from '../../assets/logo.png'
+import LogoTitle from '../../assets/projets/logo.png'
 import {Link} from 'react-router-dom'
 import React, { useState, useEffect }from 'react'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
